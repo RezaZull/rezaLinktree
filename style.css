@@ -103,7 +103,6 @@ body {
 
 .container .body ul li {
     border: 2px solid #00F0FF;
-    padding: 1rem;
     text-align: center;
     border-radius: 50px;
 }
@@ -111,4 +110,7 @@ body {
 .container .body ul li a {
     color: #00F0FF;
     text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: 1rem;
 }
