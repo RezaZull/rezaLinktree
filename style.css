@@ -1,0 +1,114 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body {
+    background-image: url('/assets/image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10%;
+}
+
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 0 4px 2px rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.8),
+            transparent);
+}
+
+.glass-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.8),
+            transparent,
+            rgba(255, 255, 255, 0.3));
+}
+
+
+.container {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .header img {
+    height: 20vh;
+    width: 20vh;
+    object-fit: cover;
+    object-position: 0 10%;
+    border-radius: 50%;
+    border: 3px solid #00d4ff;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.container .header .desc {
+    text-align: center;
+    color: white;
+}
+
+.container .header h1 {
+    margin: .5rem;
+}
+
+.container .header p {
+    margin: 0;
+}
+
+.container .body ul {
+    list-style-type: none;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+}
+
+.container .body ul li {
+    border: 2px solid #00F0FF;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.container .body ul li a {
+    color: #00F0FF;
+    text-decoration: none;
+}
